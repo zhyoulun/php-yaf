@@ -1,12 +1,5 @@
 <?php
-
-/**
- * Created by PhpStorm.
- * User: zhangyoulun
- * Date: 2017/7/13
- * Time: 20:02
- */
-final class Yaf_Registry
+class Yaf_Registry
 {
     protected static $_instance = null;
     protected $_entries = null;
