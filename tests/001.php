@@ -1,5 +1,5 @@
 <?php
-require '../src/Yaf_Registry.php';
+require '../src/autoload.php';
 
 Yaf_Registry::set('aaa', 111);
 Yaf_Registry::set('bbb', (object)[]);
