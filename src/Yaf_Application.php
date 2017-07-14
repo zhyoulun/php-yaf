@@ -107,7 +107,7 @@ final class Yaf_Application
 
     public function __destruct()
     {
-        unset(self::$_app);//todo ?待确认unset是否等价于zend_update_static_property_null()
+        self::$_app = null;
     }
 
     private function __clone(){}
