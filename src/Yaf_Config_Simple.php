@@ -12,20 +12,20 @@ final class Yaf_Config_Simple extends Yaf_Config_Abstract implements Iterator, A
         $this->_readonly = (bool)$readonly;
     }
 
-    public function __isset()
-    {
-        //todo
-    }
-
-    public function __set()
-    {
-        //todo
-    }
-
-    public function __get()
-    {
-        //todo
-    }
+//    public function __isset()
+//    {
+//        //todo
+//    }
+//
+//    public function __set()
+//    {
+//        //todo
+//    }
+//
+//    public function __get()
+//    {
+//        //todo
+//    }
 
     /**
      * Return the current element
@@ -159,13 +159,26 @@ final class Yaf_Config_Simple extends Yaf_Config_Abstract implements Iterator, A
         return count($this->_config);
     }
 
+    /**
+     * @param null $name
+     * @return $this|bool|mixed|Yaf_Config_Simple
+     */
     public function get($name = null)
     {
         if(strlen($name)==0){
             return $this;
         }
 
-        
+        if(!isset($this->_config[$name])){
+            return false;
+        }
+
+        if(is_array($this->_config[$name])){
+            return new self($this->_config[$name], $this->_readonly);
+        }
+        else{
+            return $this->_config[$name];
+        }
     }
 
     public function set()

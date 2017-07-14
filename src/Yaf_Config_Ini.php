@@ -6,20 +6,20 @@ final class Yaf_Config_Ini extends Yaf_Config_Abstract implements Iterator, Arra
         //todo
     }
 
-    public function __isset()
-    {
-        //todo
-    }
+//    public function __isset()
+//    {
+//        //todo
+//    }
 
-    public function __get()
-    {
-        //todo
-    }
-
-    public function __set()
-    {
-        //todo
-    }
+//    public function __get()
+//    {
+//        //todo
+//    }
+//
+//    public function __set()
+//    {
+//        //todo
+//    }
 
     /**
      * Return the current element
